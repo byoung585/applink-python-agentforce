@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  title: Agentforce Action
+  description: Basic example of an Agentforce Action
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+
+tags:
+  - name: Agentforce Action
+    description: Basic Agentforce Action example
+
+paths:
+  /generateBadge:
+    post:
+      tags:
+        - Agentforce Action
+      description: Use this action in response to requests for a Heroku badge with a name on it.
+      operationId: generateBadge
+      parameters:
+        - name: name
+          in: query
+          description: Name to be placed on the badge.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: This is the Heroku badge the user requested.
+          content:
+            '*/*':
+              schema:
+                type: string
+
+components: {}

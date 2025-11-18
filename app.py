@@ -129,7 +129,6 @@ class Process(Resource):
     RESTful resource for processing agent requests and returning a response.
     """
 
-    @auth.login_required  # Protect the endpoint with HTTP Basic Auth
     @api.expect(agent_request_model)  # Use the model here    
     @api.response(200, 'Success', agent_response_model)  # Define the response model here
     def post(self):
