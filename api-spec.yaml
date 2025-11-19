@@ -13,7 +13,7 @@ tags:
     description: Basic Agentforce Action example
 
 paths:
-  /generateBadge:
+  /process:
     post:
       operationId: generateBadge
       description: Use this action in response to requests for a Heroku badge with a name on it.
