@@ -30,8 +30,13 @@ paths:
         "200":
           description: This is the Heroku badge the user requested.
           content:
-            '*/*':
+            application/json:
               schema:
-                type: string
+                type: object
+                properties:
+                  message:
+                    type: string
+              
+                
 
 components: {}
