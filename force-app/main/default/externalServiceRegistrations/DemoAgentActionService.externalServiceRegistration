@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Demo Agent Action Service</label>
+    <registrationProviderType>Heroku</registrationProviderType>
+    <schema>
+openapi: 3.0.1
+info:
+  title: Agentforce Action
+  description: Basic example of an Agentforce Action
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+
+tags:
+  - name: Agentforce Action
+    description: Basic Agentforce Action example
+
+paths:
+  /process:
+    post:
+      operationId: generateBadge
+      description: Use this action in response to requests for a Heroku badge with a name on it.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        "200":
+          description: This is the Heroku badge the user requested.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              
+components: {}
+    </schema>
+    <schemaType>OpenApi3</schemaType>
+    <schemaUrl>/api/accounts</schemaUrl>
+</ExternalServiceRegistration>

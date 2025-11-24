@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComputeExtension xmlns="http://soap.sforce.com/2006/04/metadata">
+    <extensionAuthCredentials>MyHerokuNamedCredential</extensionAuthCredentials>
+    <externalServiceRegistration>DemoAgentActionService</externalServiceRegistration>
+    <masterLabel>My Agent Action Extension</masterLabel>
+    <sourceBlob>https://github.com/byoung585/applink-python-agentforce/raw/refs/heads/main/slug.tgz</sourceBlob>
+    <type>HerokuAppLink</type>
+</ComputeExtension>
